@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Amoura — Luxury Hair & Beauty Salon</title>
+
+<meta name="description" content="Amoura is a premium luxury salon offering refined hair, beauty and bridal services.">
+<meta name="theme-color" content="#28352a">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --cream:#f4f1e8;
+  --paper:#faf8f1;
+  --green:#29362b;
+  --green2:#354536;
+  --sage:#dfe5d8;
+  --text:#20251f;
+  --muted:#72766d;
+  --line:rgba(32,37,31,.16);
+  --serif:"Cormorant Garamond",serif;
+  --sans:"DM Sans",sans-serif;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--cream);
+  color:var(--text);
+  font-family:var(--sans);
+  overflow-x:hidden;
+}
+
+img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+.container{
+  width:min(1180px,90%);
+  margin:auto;
+}
+
+/* ---------- NAV ---------- */
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(244,241,232,.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:var(--serif);
+  font-size:31px;
+  font-weight:500;
+  font-style:italic;
+  letter-spacing:-1px;
+}
+
+.logo small{
+  display:block;
+  font-family:var(--sans);
+  font-size:7px;
+  font-style:normal;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  text-align:center;
+  margin-top:-5px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.5px;
+}
+
+.nav-links a{
+  position:relative;
+}
+
+.nav-links a:after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-7px;
+  width:0;
+  height:1px;
+  background:var(--green);
+  transition:.3s;
+}
+
+.nav-links a:hover:after{
+  width:100%;
+}
+
+.menu{
+  display:none;
+  border:0;
+  background:none;
+  font-size:25px;
+  cursor:pointer;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+  min-height:100svh;
+  padding-top:72px;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:#dce3d5;
+}
+
+.hero-image{
+  position:absolute;
+  inset:72px 0 0;
+  z-index:0;
+}
+
+.hero-image img{
+  height:100%;
+  object-position:center;
+  filter:saturate(.75);
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(25,35,27,.08),rgba(25,35,27,.12) 45%,rgba(25,35,27,.72));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  color:#fff;
+  padding:90px 0 70px;
+  width:100%;
+}
+
+.eyebrow{
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  margin-bottom:16px;
+  opacity:.85;
+}
+
+.hero h1{
+  font-family:var(--serif);
+  font-size:clamp(60px,12vw,145px);
+  line-height:.78;
+  font-weight:400;
+  letter-spacing:-4px;
+  max-width:850px;
+}
+
+.hero h1 em{
+  font-style:italic;
+}
+
+.hero-bottom{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-top:38px;
+  gap:30px;
+}
+
+.hero-description{
+  max-width:390px;
+  font-size:13px;
+  line-height:1.8;
+  color:rgba(255,255,255,.82);
+}
+
+.hero-btn{
+  border:1px solid rgba(255,255,255,.55);
+  padding:15px 22px;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  transition:.3s;
+}
+
+.hero-btn:hover{
+  background:#fff;
+  color:var(--green);
+}
+
+/* ---------- INTRO ---------- */
+
+.intro{
+  padding:120px 0;
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:70px;
+}
+
+.section-number{
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.intro h2{
+  font-family:var(--serif);
+  font-size:clamp(44px,6vw,78px);
+  font-weight:400;
+  line-height:.95;
+  max-width:760px;
+}
+
+.intro h2 em{
+  font-style:italic;
+}
+
+.intro-text{
+  margin-top:35px;
+  max-width:550px;
+  color:var(--muted);
+  line-height:1.9;
+  font-size:14px;
+}
+
+/* ---------- SERVICES ---------- */
+
+.services{
+  background:var(--green);
+  color:#f3f0e6;
+  padding:110px 0;
+}
+
+.services-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+  margin-bottom:65px;
+}
+
+.services h2{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:clamp(50px,7vw,90px);
+  line-height:.85;
+}
+
+.services-note{
+  max-width:270px;
+  font-size:12px;
+  line-height:1.8;
+  color:rgba(243,240,230,.65);
+}
+
+.service-list{
+  border-top:1px solid rgba(255,255,255,.2);
+}
+
+.service{
+  display:grid;
+  grid-template-columns:70px 1fr auto;
+  align-items:center;
+  gap:25px;
+  padding:25px 0;
+  border-bottom:1px solid rgba(255,255,255,.2);
+  transition:.35s;
+}
+
+.service:hover{
+  padding-left:15px;
+  background:rgba(255,255,255,.025);
+}
+
+.service-no{
+  font-size:11px;
+  color:rgba(255,255,255,.45);
+}
+
+.service h3{
+  font-family:var(--serif);
+  font-weight:400;
+  font-size:31px;
+}
+
+.service p{
+  font-size:11px;
+  color:rgba(255,255,255,.5);
+  margin-top:4px;
+}
+
+.price{
+  font-family:var(--serif);
+  font-size:22px;
+}
+
+/* ---------- FEATURE ---------- */
+
+.feature{
+  padding:120px 0;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  min-height:620px;
+}
+
+.feature-image{
+  overflow:hidden;
+}
+
+.feature-image img{
+  height:100%;
+  transition:transform 1s ease;
+}
+
+.feature:hover .feature-image img{
+  transform:scale(1.035);
+}
+
+.feature-content{
+  background:#e5e8dc;
+  padding:70px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.feature-content h2{
+  font-family:var(--serif);
+  font-size:clamp(50px,6vw,80px);
+  font-weight:400;
+  line-height:.9;
+}
+
+.feature-content h2
