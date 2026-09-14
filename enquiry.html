@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book an appointment at Amoura.">
+  <title>Amoura — Book an Appointment</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Italianno&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="enquiry-page">
+
+<header class="site-header">
+  <a href="index.html" class="logo">
+    <span class="logo-main">Amoura</span>
+    <span class="logo-sub">HAIR • BEAUTY • WELLNESS</span>
+  </a>
+
+  <button class="menu-button" id="menuButton">
+    <span></span>
+    <span></span>
+    <small>MENU</small>
+  </button>
+</header>
+
+<aside class="side-menu" id="sideMenu">
+  <button class="menu-close" id="menuClose">×</button>
+
+  <div class="menu-inner">
+    <span class="menu-kicker">AMOURA</span>
+
+    <nav class="main-nav">
+      <a href="index.html">Home <i>01</i></a>
+      <a href="index.html#about">About Amoura <i>02</i></a>
+      <a href="index.html#services">Our Services <i>03</i></a>
+      <a href="gallery.html">Work Gallery <i>04</i></a>
+      <a href="price.html">Price List <i>05</i></a>
+      <a href="contact.html">Contact <i>06</i></a>
+      <a href="enquiry.html">Book an Appointment <i>07</i></a>
+    </nav>
+
+    <div class="menu-bottom">
+      <span>Beauty, considered.</span>
+      <span>© Amoura</span>
+    </div>
+  </div>
+</aside>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+
+
+<main>
+
+  <section class="enquiry-hero">
+
+    <div class="enquiry-hero-copy reveal">
+      <span class="eyebrow">AMOURA / APPOINTMENTS</span>
+      <p class="script-title">Let's create</p>
+      <h1>something<br><em>beautiful.</em></h1>
+      <p>
+        Tell us a little about what you have in mind.
+        We'll get back to you with the next steps.
+      </p>
+    </div>
+
+    <div class="enquiry-art reveal-delay">
+
+      <svg viewBox="0 0 420 600" xmlns="http://www.w3.org/2000/svg">
+
+        <path class="draw-line"
+          d="M210 105
+             C170 126 148 166 150 211
+             C151 252 170 275 191 290
+             C207 301 212 315 206 332
+             C198 352 174 368 157 384
+             C139 401 147 425 170 433
+             C202 444 254 427 279 405
+             C305 382 312 354 304 331
+             C298 311 282 298 265 288
+             C250 279 245 267 251 251
+             C258 232 278 222 283 201
+             C290 176 281 147 263 131"/>
+
+        <path class="draw-line"
+          d="M150 211 C132 215 118 228 115 241
+             C113 251 124 256 138 251"/>
+
+        <path class="draw-line"
+          d="M176 270 C191 261 208 262 221 271"/>
+
+        <path class="draw-line"
+          d="M179 315 C194 306 210 307 222 317
+             C209 325 192 325 179 315Z"/>
+
+        <path class="draw-line"
+          d="M151 166 C124 145 108 117 108 87
+             C131 98 149 122 159 151"/>
+
+        <path class="draw-line"
+          d="M184 130 C174 101 183 74 205 57
+             C211 84 204 108 193 132"/>
+
+        <path class="draw-line"
+          d="M230 119 C234 88 252 68 278 64
+             C272 93 256 113 237 125"/>
+
+        <path class="draw-line"
+          d="M270 148 C299 134 327 143 345 165
+             C316 170 290 162 272 153"/>
+
+      </svg>
+
+    </div>
+
+  </section>
+
+
+  <section class="enquiry-section section-pad">
+
+    <div class="section-label reveal">
+      <span>01</span>
+      <span>YOUR APPOINTMENT</span>
+    </div>
+
+    <div class="enquiry-grid">
+
+      <div class="enquiry-intro reveal">
+
+        <p class="script-title">Tell us</p>
+
+        <h2>
+          A little about<br>
+          <em>what you need.</em>
+        </h2>
+
+        <p>
+          Complete the form and we'll contact you to confirm
+          your appointment and discuss anything you may need.
+        </p>
+
+        <div class="enquiry-side-note">
+          <span>OR</span>
+          <a href="https://wa.me/919999999999">
+            Message us directly<br>on WhatsApp ↗
+          </a>
+        </div>
+
+      </div>
+
+
+      <form class="appointment-form" id="appointmentForm">
+
+        <div class="form-row">
+
+          <label>
+            <span>01 / YOUR NAME</span>
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+
+          <label>
+            <span>02 / PHONE</span>
+            <input type="tel" name="phone" placeholder="+91" required>
+          </label>
+
+        </div>
+
+
+        <label>
+          <span>03 / SERVICE</span>
+
+          <select name="service" required>
+            <option value="">Select a service</option>
+            <option>Hair</option>
+            <option>Hair Colour</option>
+            <option>Hair Treatment</option>
+            <option>Makeup</option>
+            <option>Bridal Makeup</option>
+            <option>Skin</option>
+            <option>Nails</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+
+        <div class="form-row">
+
+          <label>
+            <span>04 / PREFERRED DATE</span>
+            <input type="date" name="date" required>
+          </label>
+
+          <label>
+            <span>05 / PREFERRED TIME</span>
+            <select name="time">
+              <option value="">Any time</option>
+              <option>10:00 AM</option>
+              <option>11:00 AM</option>
+              <option>12:00 PM</option>
+              <option>1:00 PM</option>
+              <option>2:00 PM</option>
+              <option>3:00 PM</option>
+              <option>4:00 PM</option>
+              <option>5:00 PM</option>
+              <option>6:00 PM</option>
+              <option>7:00 PM</option>
+            </select>
+          </label>
+
+        </div>
+
+
+        <label>
+          <span>06 / TELL US MORE</span>
+          <textarea name="message" rows="5" placeholder="Anything you'd like us to know?"></textarea>
+        </label>
+
+
+        <button type="submit" class="submit-button">
+          <span>Send enquiry</span>
+          <b>↗</b>
+        </button>
+
+        <p class="form-status" id="formStatus"></p>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+  <section class="enquiry-bottom">
+
+    <div class="enquiry-bottom-art">
+
+      <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+
+        <path class="draw-line light-line"
+          d="M245 70
+             C207 88 185 124 187 163
+             C188 199 205 220 224 233
+             C239 243 244 256 238 271
+             C230 288 208 301 192 315
+             C177 329 183 350 205 357
+             C236 367 286 351 310 331
+             C335 310 341 286 334 265
+             C328 247 313 235 298 226
+             C284 218 279 207 285 192
+             C292 176 309 167 314 149
+             C320 128 312 104 296 91"/>
+
+        <path class="draw-line light-line"
+          d="M187 163 C170 167 157 178 154 190
+             C152 200 162 204 175 200"/>
+
+        <path class="draw-line light-line"
+          d="M211 216 C225 208 240 209 252 217"/>
+
+        <path class="draw-line light-line"
+          d="M214 257 C228 249 243 250 254 259
+             C242 267 226 266 214 257Z"/>
+
+        <path class="draw-line light-line"
+          d="M188 123 C162 104 147 78 147 50
+             C170 60 185 82 196 109"/>
+
+        <path class="draw-line light-line"
+          d="M219 89 C210 63 218 39 239 24
+             C245 48 239 70 228 91"/>
+
+        <path class="draw-line light-line"
+          d="M263 80 C267 52 284 34 308 31
+             C302 56 288 74 271 85"/>
+
+      </svg>
+
+    </div>
+
+    <div class="enquiry-bottom-copy">
+      <p class="script-title light-script">Amoura</p>
+      <h2>Beauty is<br><em>a feeling.</em></h2>
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <div class="footer-logo">Amoura</div>
+      <p>Beauty, beautifully considered.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="price.html">Price List</a>
+      <a href="contact.html">Contact</a>
+      <a href="enquiry.html">Appointment</a>
+    </div>
+
+    <div class="footer-contact">
+      <span>GET IN TOUCH</span>
+      <a href="tel:+919999999999">+91 99999 99999</a>
+      <a href="mailto:hello@amoura.in">hello@amoura.in</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 AMOURA</span>
+    <span>HAIR • BEAUTY • WELLNESS</span>
+    <span>MADE WITH INTENTION</span>
+  </div>
+
+</footer>
+
+<div class="floating-connect">
+  <a href="enquiry.html" class="connect-bubble">Connect!</a>
+  <a href="https://wa.me/919999999999" class="whatsapp-bubble">◔</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
