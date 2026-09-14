@@ -3,679 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Amoura — Luxury Hair & Beauty Salon</title>
-<meta name="description" content="Amoura is a luxury hair and beauty salon offering refined hair, beauty and bridal experiences.">
-
+<meta name="description" content="Amoura — a refined luxury hair and beauty salon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-
-<style>
-:root{
-  --cream:#f5f1e8;
-  --paper:#fbf9f4;
-  --green:#29362b;
-  --deep:#1d271f;
-  --sage:#dce1d7;
-  --line:rgba(41,54,43,.18);
-  --text:#252b25;
-  --serif:"Playfair Display",Georgia,serif;
-  --sans:"DM Sans",Arial,sans-serif;
-}
-
-*{box-sizing:border-box;margin:0;padding:0}
-
-html{scroll-behavior:smooth}
-
-body{
-  background:var(--cream);
-  color:var(--text);
-  font-family:var(--sans);
-  line-height:1.6;
-  overflow-x:hidden;
-}
-
-img{
-  width:100%;
-  display:block;
-  object-fit:cover;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-button,input,textarea{font:inherit}
-
-.nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  height:78px;
-  z-index:50;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 5vw;
-  color:#fff;
-  transition:.4s;
-}
-
-.nav.scrolled{
-  background:rgba(245,241,232,.94);
-  color:var(--green);
-  backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--line);
-}
-
-.logo{
-  font-family:var(--serif);
-  font-size:27px;
-  letter-spacing:.08em;
-}
-
-.logo span{
-  display:block;
-  font-family:var(--sans);
-  font-size:8px;
-  letter-spacing:.34em;
-  text-align:center;
-  margin-top:-5px;
-}
-
-.nav-links{
-  display:flex;
-  gap:34px;
-  align-items:center;
-  font-size:12px;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-
-.nav-links a{opacity:.9}
-
-.nav-cta{
-  border:1px solid currentColor;
-  padding:11px 18px;
-}
-
-.menu{
-  display:none;
-  border:0;
-  background:none;
-  color:inherit;
-  font-size:27px;
-}
-
-.hero{
-  min-height:100svh;
-  position:relative;
-  display:flex;
-  align-items:flex-end;
-  overflow:hidden;
-  color:#fff;
-  background:#263128;
-}
-
-.hero-bg{
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg,rgba(15,25,18,.72),rgba(15,25,18,.12)),
-    url("https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1800&q=85")
-    center/cover;
-  transform:scale(1.02);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  width:100%;
-  padding:150px 7vw 80px;
-  max-width:950px;
-}
-
-.kicker{
-  text-transform:uppercase;
-  letter-spacing:.25em;
-  font-size:10px;
-  margin-bottom:22px;
-}
-
-.hero h1{
-  font-family:var(--serif);
-  font-size:clamp(55px,9vw,125px);
-  font-weight:400;
-  line-height:.9;
-  max-width:850px;
-}
-
-.hero h1 em{font-weight:400}
-
-.hero-bottom{
-  margin-top:42px;
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-end;
-  gap:30px;
-}
-
-.hero-copy{
-  max-width:400px;
-  font-size:14px;
-  opacity:.9;
-}
-
-.hero-btn{
-  display:inline-flex;
-  padding:16px 24px;
-  background:var(--cream);
-  color:var(--green);
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-}
-
-section{padding:120px 7vw}
-
-.eyebrow{
-  font-size:10px;
-  letter-spacing:.24em;
-  text-transform:uppercase;
-  color:#697166;
-  margin-bottom:18px;
-}
-
-.serif{font-family:var(--serif);font-weight:400}
-
-.intro{
-  display:grid;
-  grid-template-columns:1fr 1.4fr;
-  gap:10vw;
-  align-items:end;
-}
-
-.intro h2{
-  font-size:clamp(42px,6vw,82px);
-  line-height:1;
-}
-
-.intro p{
-  max-width:590px;
-  font-size:18px;
-  color:#5f655e;
-}
-
-.about-image{
-  margin-top:70px;
-  height:65vh;
-  min-height:430px;
-  background:url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=85") center/cover;
-}
-
-.green{
-  background:var(--green);
-  color:#f7f4eb;
-}
-
-.services-head{
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
-  align-items:end;
-  margin-bottom:65px;
-}
-
-.services-head h2{
-  font-size:clamp(45px,6vw,80px);
-  line-height:.95;
-}
-
-.services-note{
-  max-width:300px;
-  font-size:13px;
-  color:#c7cdc3;
-}
-
-.services{
-  border-top:1px solid rgba(255,255,255,.25);
-}
-
-.service{
-  display:grid;
-  grid-template-columns:70px 1fr 130px;
-  gap:30px;
-  align-items:center;
-  padding:28px 0;
-  border-bottom:1px solid rgba(255,255,255,.18);
-}
-
-.service-number{
-  font-size:11px;
-  opacity:.5;
-}
-
-.service h3{
-  font-family:var(--serif);
-  font-size:27px;
-  font-weight:400;
-}
-
-.service p{
-  color:#bdc5bb;
-  font-size:12px;
-  margin-top:3px;
-}
-
-.price{
-  text-align:right;
-  font-size:14px;
-}
-
-.feature{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  min-height:650px;
-  padding:0;
-}
-
-.feature-image{
-  min-height:600px;
-  background:url("https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?auto=format&fit=crop&w=1200&q=85") center/cover;
-}
-
-.feature-content{
-  padding:100px 9vw;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
-
-.feature-content h2{
-  font-family:var(--serif);
-  font-size:clamp(45px,5vw,75px);
-  font-weight:400;
-  line-height:1;
-  margin-bottom:28px;
-}
-
-.feature-content p{
-  max-width:470px;
-  color:#626960;
-  font-size:15px;
-}
-
-.text-link{
-  margin-top:35px;
-  width:max-content;
-  border-bottom:1px solid var(--green);
-  padding-bottom:7px;
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:.15em;
-}
-
-.gallery-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:end;
-  margin-bottom:50px;
-}
-
-.gallery-head h2{
-  font-size:clamp(45px,6vw,80px);
-  line-height:.95;
-}
-
-.gallery{
-  display:grid;
-  grid-template-columns:1fr 1fr 1fr;
-  gap:14px;
-}
-
-.gallery div{overflow:hidden}
-
-.gallery img{
-  height:430px;
-  transition:transform .7s ease;
-}
-
-.gallery div:nth-child(2) img{height:540px}
-.gallery div:nth-child(3) img{height:430px}
-
-.gallery div:hover img{transform:scale(1.035)}
-
-.bridal{
-  background:#e6e5dc;
-  display:grid;
-  grid-template-columns:1.1fr 1fr;
-  gap:8vw;
-  align-items:center;
-}
-
-.bridal-image{
-  height:650px;
-  background:url("https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=85") center/cover;
-}
-
-.bridal-copy h2{
-  font-family:var(--serif);
-  font-size:clamp(50px,6vw,90px);
-  font-weight:400;
-  line-height:.95;
-  margin-bottom:30px;
-}
-
-.bridal-copy p{
-  max-width:480px;
-  color:#5d625c;
-  margin-bottom:30px;
-}
-
-.testimonial{
-  text-align:center;
-  max-width:900px;
-  margin:auto;
-}
-
-.quote{
-  font-family:var(--serif);
-  font-size:clamp(34px,5vw,62px);
-  line-height:1.08;
-}
-
-.quote-mark{
-  font-family:var(--serif);
-  font-size:70px;
-  line-height:.5;
-  margin-bottom:25px;
-}
-
-.client{
-  margin-top:30px;
-  font-size:10px;
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  color:#737970;
-}
-
-.contact{
-  background:var(--deep);
-  color:#f6f2e8;
-}
-
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10vw;
-}
-
-.contact h2{
-  font-family:var(--serif);
-  font-size:clamp(50px,7vw,90px);
-  font-weight:400;
-  line-height:.95;
-  margin-bottom:30px;
-}
-
-.contact-copy{
-  color:#bfc5bc;
-  max-width:450px;
-}
-
-.contact-details{
-  margin-top:45px;
-  display:grid;
-  gap:18px;
-}
-
-.detail-label{
-  font-size:9px;
-  letter-spacing:.2em;
-  text-transform:uppercase;
-  color:#8f988d;
-}
-
-.detail-value{
-  font-family:var(--serif);
-  font-size:20px;
-}
-
-form{
-  display:grid;
-  gap:18px;
-}
-
-input,textarea{
-  width:100%;
-  background:transparent;
-  color:#fff;
-  border:0;
-  border-bottom:1px solid rgba(255,255,255,.3);
-  padding:15px 0;
-  outline:0;
-}
-
-textarea{min-height:100px;resize:vertical}
-
-input::placeholder,textarea::placeholder{color:#8f988d}
-
-.submit{
-  margin-top:15px;
-  width:max-content;
-  border:1px solid #ddd;
-  background:#f4f0e7;
-  color:var(--green);
-  padding:15px 25px;
-  cursor:pointer;
-  text-transform:uppercase;
-  letter-spacing:.15em;
-  font-size:10px;
-}
-
-footer{
-  background:#161d18;
-  color:#aeb5ab;
-  padding:35px 7vw;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
-  font-size:10px;
-  letter-spacing:.1em;
-  text-transform:uppercase;
-}
-
-.socials{display:flex;gap:25px}
-
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  z-index:40;
-  width:58px;
-  height:58px;
-  border-radius:50%;
-  display:grid;
-  place-items:center;
-  background:#263b2b;
-  color:#fff;
-  box-shadow:0 10px 30px rgba(0,0,0,.2);
-  font-size:22px;
-}
-
-.reveal{
-  opacity:0;
-  transform:translateY(25px);
-  transition:opacity .8s ease,transform .8s ease;
-}
-
-.reveal.visible{
-  opacity:1;
-  transform:none;
-}
-
-@media(max-width:800px){
-
-  .nav{
-    height:68px;
-    padding:0 6vw;
-  }
-
-  .logo{font-size:23px}
-
-  .nav-links{
-    position:fixed;
-    inset:68px 0 auto 0;
-    background:var(--cream);
-    color:var(--green);
-    padding:30px 7vw 40px;
-    display:none;
-    flex-direction:column;
-    align-items:flex-start;
-    gap:23px;
-    border-bottom:1px solid var(--line);
-  }
-
-  .nav-links.open{display:flex}
-
-  .nav-cta{display:none}
-
-  .menu{display:block}
-
-  .hero-content{
-    padding:130px 6vw 55px;
-  }
-
-  .hero h1{
-    font-size:clamp(52px,17vw,82px);
-  }
-
-  .hero-bottom{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  section{padding:80px 6vw}
-
-  .intro{
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  .intro p{font-size:16px}
-
-  .about-image{
-    margin-top:45px;
-    height:55vh;
-    min-height:400px;
-  }
-
-  .services-head{
-    display:block;
-    margin-bottom:40px;
-  }
-
-  .services-note{
-    margin-top:25px;
-  }
-
-  .service{
-    grid-template-columns:35px 1fr;
-    gap:12px;
-  }
-
-  .price{
-    grid-column:2;
-    text-align:left;
-    margin-top:-10px;
-  }
-
-  .service h3{font-size:23px}
-
-  .feature{
-    grid-template-columns:1fr;
-  }
-
-  .feature-image{
-    min-height:480px;
-  }
-
-  .feature-content{
-    padding:75px 6vw;
-  }
-
-  .gallery-head{
-    display:block;
-  }
-
-  .gallery{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .gallery img,
-  .gallery div:nth-child(2) img,
-  .gallery div:nth-child(3) img{
-    height:300px;
-  }
-
-  .gallery div:first-child{
-    grid-column:span 2;
-  }
-
-  .bridal{
-    grid-template-columns:1fr;
-    gap:0;
-  }
-
-  .bridal-image{
-    height:500px;
-    min-height:0;
-  }
-
-  .bridal-copy{
-    padding:75px 6vw;
-  }
-
-  .contact-grid{
-    grid-template-columns:1fr;
-    gap:65px;
-  }
-
-  footer{
-    padding:30px 6vw;
-    flex-direction:column;
-    align-items:flex-start;
-  }
-}
-
-@media(max-width:430px){
-  .gallery{grid-template-columns:1fr}
-  .gallery div:first-child{grid-column:auto}
-  .gallery img,
-  .gallery div:nth-child(2) img,
-  .gallery div:nth-child(3) img{height:420px}
-}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="nav" id="nav">
-  <a href="#" class="logo">AMOURA<span>HAIR & BEAUTY</span></a>
+  <a href="index.html" class="logo">AMOURA<span>HAIR & BEAUTY</span></a>
 
   <nav class="nav-links" id="navLinks">
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#bridal">Bridal</a>
-    <a href="#contact">Contact</a>
-    <a class="nav-cta" href="#contact">Book Appointment</a>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="price.html">Price</a>
+    <a href="enquiry.html">Enquiry</a>
   </nav>
 
+  <a class="nav-cta" href="enquiry.html">Book Appointment</a>
   <button class="menu" id="menu" aria-label="Open menu">☰</button>
 </header>
 
@@ -686,7 +34,6 @@ footer{
 
   <div class="hero-content reveal">
     <div class="kicker">Luxury Hair & Beauty Salon</div>
-
     <h1>Beauty,<br><em>beautifully</em><br>considered.</h1>
 
     <div class="hero-bottom">
@@ -695,12 +42,12 @@ footer{
         Thoughtful styling, refined rituals and effortless elegance.
       </p>
 
-      <a class="hero-btn" href="#contact">Begin your experience</a>
+      <a class="hero-btn" href="enquiry.html">Begin your experience</a>
     </div>
   </div>
 </section>
 
-<section id="about">
+<section>
   <div class="intro reveal">
     <div>
       <div class="eyebrow">01 — The House</div>
@@ -717,7 +64,7 @@ footer{
   <div class="about-image reveal"></div>
 </section>
 
-<section class="green" id="services">
+<section class="green">
   <div class="services-head reveal">
     <div>
       <div class="eyebrow">02 — Services</div>
@@ -731,52 +78,39 @@ footer{
   </div>
 
   <div class="services reveal">
-
     <div class="service">
       <div class="service-number">01</div>
-      <div>
-        <h3>Signature Haircut</h3>
-        <p>Cut, consultation & finish</p>
-      </div>
+      <div><h3>Signature Haircut</h3><p>Cut, consultation & finish</p></div>
       <div class="price">₹1,800</div>
     </div>
 
     <div class="service">
       <div class="service-number">02</div>
-      <div>
-        <h3>Luxury Hair Ritual</h3>
-        <p>Deep treatment, massage & styling</p>
-      </div>
+      <div><h3>Luxury Hair Ritual</h3><p>Deep treatment, massage & styling</p></div>
       <div class="price">₹2,500</div>
     </div>
 
     <div class="service">
       <div class="service-number">03</div>
-      <div>
-        <h3>Colour Atelier</h3>
-        <p>Personalised colour & finishing</p>
-      </div>
+      <div><h3>Colour Atelier</h3><p>Personalised colour & finishing</p></div>
       <div class="price">From ₹4,500</div>
     </div>
 
     <div class="service">
       <div class="service-number">04</div>
-      <div>
-        <h3>Blowout & Finish</h3>
-        <p>Polished styling for every occasion</p>
-      </div>
+      <div><h3>Blowout & Finish</h3><p>Polished styling for every occasion</p></div>
       <div class="price">₹1,200</div>
     </div>
 
     <div class="service">
       <div class="service-number">05</div>
-      <div>
-        <h3>Bridal Beauty</h3>
-        <p>Hair, makeup & complete bridal styling</p>
-      </div>
+      <div><h3>Bridal Beauty</h3><p>Hair, makeup & complete bridal styling</p></div>
       <div class="price">From ₹15,000</div>
     </div>
+  </div>
 
+  <div style="margin-top:40px" class="reveal">
+    <a class="hero-btn" href="price.html">View complete price menu</a>
   </div>
 </section>
 
@@ -785,101 +119,71 @@ footer{
 
   <div class="feature-content reveal">
     <div class="eyebrow">03 — The Experience</div>
-
     <h2>Come for the transformation. Stay for the ritual.</h2>
-
     <p>
       From the first consultation to the final mirror check, every part
       of your visit has been designed to feel personal, calm and considered.
       No rush. No noise. Just exceptional beauty.
     </p>
-
-    <a href="#contact" class="text-link">Reserve your chair →</a>
+    <a href="enquiry.html" class="text-link">Reserve your chair →</a>
   </div>
 </section>
 
-<section id="gallery">
+<section>
   <div class="gallery-head reveal">
     <div>
       <div class="eyebrow">04 — Gallery</div>
       <h2 class="serif">A glimpse<br>inside Amoura.</h2>
     </div>
+    <a href="gallery.html" class="text-link">View full gallery →</a>
   </div>
 
   <div class="gallery reveal">
-    <div>
-      <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1000&q=85" alt="Luxury salon interior">
-    </div>
-
-    <div>
-      <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1000&q=85" alt="Beauty portrait">
-    </div>
-
-    <div>
-      <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85" alt="Salon styling">
-    </div>
-
-    <div>
-      <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1000&q=85" alt="Hair styling">
-    </div>
-
-    <div>
-      <img src="https://images.unsplash.com/photo-1526045478516-99145907023c?auto=format&fit=crop&w=1000&q=85" alt="Luxury beauty">
-    </div>
-
-    <div>
-      <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1000&q=85" alt="Beauty treatment">
-    </div>
+    <div><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1000&q=85" alt="Luxury salon interior"></div>
+    <div><img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1000&q=85" alt="Beauty portrait"></div>
+    <div><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=85" alt="Salon styling"></div>
   </div>
 </section>
 
-<section class="bridal" id="bridal">
+<section class="bridal">
   <div class="bridal-image"></div>
 
   <div class="bridal-copy reveal">
     <div class="eyebrow">05 — Bridal</div>
-
     <h2>Your most beautiful day deserves more than beautiful.</h2>
-
     <p>
       A bespoke bridal experience created around you.
       From hair and makeup to the smallest finishing detail,
       our bridal team works with you to create a look that feels
       timeless, personal and completely yours.
     </p>
-
-    <a href="#contact" class="text-link">Enquire for bridal →</a>
+    <a href="enquiry.html" class="text-link">Enquire for bridal →</a>
   </div>
 </section>
 
 <section>
   <div class="testimonial reveal">
     <div class="quote-mark">“</div>
-
     <div class="quote">
       The entire experience felt like stepping into another world.
       Beautiful, calm and incredibly personal.
     </div>
-
-    <div class="client">— Riya Sharma · Amoura Client</div>
+    <div class="client">— Amoura Client</div>
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact">
   <div class="contact-grid">
-
     <div class="reveal">
       <div class="eyebrow">06 — Contact</div>
-
       <h2>Let's create<br>something<br>beautiful.</h2>
 
       <p class="contact-copy">
-        Ready for your next appointment?
-        Send us a message and our team will get back to you shortly.
+        Ready for your next appointment? Send us a message and our team
+        will get back to you shortly.
       </p>
 
       <div class="contact-details">
-
         <div>
           <div class="detail-label">Visit</div>
           <div class="detail-value">123 Luxury Avenue, New Delhi</div>
@@ -887,35 +191,22 @@ footer{
 
         <div>
           <div class="detail-label">Call</div>
-          <div class="detail-value">
-            <a href="tel:+919999999999">+91 99999 99999</a>
-          </div>
+          <div class="detail-value"><a href="tel:+919999999999">+91 99999 99999</a></div>
         </div>
 
         <div>
           <div class="detail-label">Hours</div>
           <div class="detail-value">10:00 AM — 8:00 PM</div>
         </div>
-
       </div>
     </div>
 
-    <form id="bookingForm" class="reveal">
-
-      <input type="text" placeholder="Your name" required>
-
-      <input type="tel" placeholder="Phone number" required>
-
-      <input type="email" placeholder="Email address">
-
-      <input type="text" placeholder="Service you're interested in">
-
-      <textarea placeholder="Tell us a little about your appointment"></textarea>
-
-      <button class="submit" type="submit">Send enquiry</button>
-
-    </form>
-
+    <div class="reveal">
+      <p class="contact-copy" style="margin-bottom:30px">
+        Ready to visit Amoura? Send your preferred service and timing.
+      </p>
+      <a class="submit" href="enquiry.html">Make an enquiry →</a>
+    </div>
   </div>
 </section>
 
@@ -923,61 +214,16 @@ footer{
 
 <footer>
   <div>© 2026 Amoura Beauty House</div>
-
   <div class="socials">
-    <a href="#" aria-label="Instagram">Instagram</a>
-    <a href="#" aria-label="Facebook">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Facebook</a>
   </div>
 </footer>
 
 <a class="whatsapp"
    href="https://wa.me/919999999999?text=Hello%20Amoura%2C%20I%20would%20like%20to%20book%20an%20appointment."
-   aria-label="WhatsApp">
-  ☎
-</a>
+   aria-label="WhatsApp">☎</a>
 
-<script>
-const nav = document.getElementById("nav");
-const menu = document.getElementById("menu");
-const navLinks = document.getElementById("navLinks");
-
-window.addEventListener("scroll",()=>{
-  nav.classList.toggle("scrolled",window.scrollY>40);
-});
-
-menu.addEventListener("click",()=>{
-  navLinks.classList.toggle("open");
-});
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-  link.addEventListener("click",()=>{
-    navLinks.classList.remove("open");
-  });
-});
-
-const observer = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
-    }
-  });
-},{threshold:.12});
-
-document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
-
-document.getElementById("bookingForm").addEventListener("submit",(e)=>{
-  e.preventDefault();
-
-  const message =
-    "Hello Amoura, I would like to make an appointment.";
-
-  window.open(
-    "https://wa.me/919999999999?text="+encodeURIComponent(message),
-    "_blank"
-  );
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
