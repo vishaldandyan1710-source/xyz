@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#e9eee5">
+  <meta name="description" content="Amoura — a refined beauty experience where artistry, care and individuality meet.">
+  <title>Amoura — Beauty, beautifully considered.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Italianno&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="home-page">
+
+  <!-- LOADER -->
+  <div class="page-loader">
+    <div class="loader-brand">AMOURA</div>
+    <div class="loader-line"><span></span></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <a href="index.html" class="logo">
+      <span class="logo-main">Amoura</span>
+      <span class="logo-sub">HAIR • BEAUTY • WELLNESS</span>
+    </a>
+
+    <button class="menu-button" id="menuButton" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <small>MENU</small>
+    </button>
+  </header>
+
+  <!-- SIDE MENU -->
+  <aside class="side-menu" id="sideMenu">
+    <button class="menu-close" id="menuClose">×</button>
+
+    <div class="menu-inner">
+      <span class="menu-kicker">AMOURA</span>
+
+      <nav class="main-nav">
+        <a href="index.html" data-menu-link>Home <i>01</i></a>
+        <a href="#about" data-menu-link>About Amoura <i>02</i></a>
+        <a href="#services" data-menu-link>Our Services <i>03</i></a>
+        <a href="gallery.html" data-menu-link>Work Gallery <i>04</i></a>
+        <a href="price.html" data-menu-link>Price List <i>05</i></a>
+        <a href="contact.html" data-menu-link>Contact <i>06</i></a>
+        <a href="enquiry.html" data-menu-link>Book an Appointment <i>07</i></a>
+      </nav>
+
+      <div class="menu-bottom">
+        <span>Beauty, considered.</span>
+        <span>© Amoura</span>
+      </div>
+    </div>
+  </aside>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-noise"></div>
+
+      <div class="hero-left reveal">
+        <span class="eyebrow">A MODERN BEAUTY ATELIER</span>
+
+        <h1>
+          Beauty,<br>
+          <em>beautifully</em><br>
+          considered.
+        </h1>
+
+        <p class="hero-copy">
+          A refined space for hair, beauty and self-expression —
+          created around the woman you are.
+        </p>
+
+        <div class="hero-actions">
+          <a href="enquiry.html" class="round-button">
+            <span>Book<br>appointment</span>
+            <b>↗</b>
+          </a>
+
+          <a href="#about" class="scroll-link">
+            <span class="scroll-circle">↓</span>
+            Discover Amoura
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-art reveal-delay">
+        <div class="art-orbit"></div>
+
+        <!-- ORIGINAL BOTANICAL FEMALE LINE ART -->
+        <svg class="botanical-face" viewBox="0 0 600 820" xmlns="http://www.w3.org/2000/svg" aria-label="Botanical female line illustration">
+
+          <!-- face -->
+          <path class="draw-line"
+            d="M280 290
+               C252 316 238 355 239 405
+               C240 450 261 478 286 495
+               C307 509 315 529 307 550
+               C297 576 266 598 238 617
+               C210 636 190 657 193 688
+               C196 719 217 739 249 744
+               C292 751 350 735 396 709
+               C438 686 463 658 470 625
+               C476 595 470 568 450 548
+               C433 531 414 522 397 513
+               C374 501 363 487 369 467
+               C374 450 392 437 407 426
+               C422 414 427 394 421 373
+               C415 351 400 333 380 319"/>
+
+          <!-- forehead / nose / lips -->
+          <path class="draw-line"
+            d="M239 405
+               C220 412 205 424 201 438
+               C198 449 208 455 224 452
+               C238 449 247 442 252 433"/>
+
+          <path class="draw-line"
+            d="M307 550
+               C294 547 279 548 266 554
+               C255 560 253 570 265 574
+               C279 578 294 572 305 565"/>
+
+          <path class="draw-line"
+            d="M261 594
+               C276 587 295 588 308 598
+               C293 606 277 607 261 594Z"/>
+
+          <!-- eye -->
+          <path class="draw-line"
+            d="M278 454 C293 445 311 445 324 454
+               C311 463 293 463 278 454Z"/>
+
+          <path class="draw-line"
+            d="M288 453 C296 449 304 449 312 453"/>
+
+          <!-- neck -->
+          <path class="draw-line"
+            d="M249 744 C252 770 255 793 258 814"/>
+          <path class="draw-line"
+            d="M396 709 C385 748 373 778 355 813"/>
+
+          <!-- large flower crown -->
+          <path class="draw-line"
+            d="M242 316 C211 290 195 255 204 222
+               C217 239 235 250 252 254
+               C225 220 229 180 251 157
+               C260 185 276 204 296 216
+               C282 179 299 139 331 121
+               C332 151 345 173 364 190
+               C370 155 398 135 426 133
+               C418 163 420 188 432 207
+               C455 186 488 185 511 200
+               C492 220 485 241 489 261
+               C518 247 548 257 563 280
+               C535 285 513 299 502 319"/>
+
+          <!-- petals -->
+          <path class="draw-line"
+            d="M296 216 C273 224 259 247 268 270
+               C279 295 306 305 331 292
+               C311 279 304 254 311 230"/>
+
+          <path class="draw-line"
+            d="M331 121 C320 148 326 178 350 197
+               C370 213 398 207 411 188
+               C386 184 365 163 356 137"/>
+
+          <path class="draw-line"
+            d="M426 133 C403 153 399 180 413 203
+               C430 229 458 232 477 214
+               C451 209 431 190 426 166"/>
+
+          <path class="draw-line"
+            d="M511 200 C486 205 468 222 466 245
+               C464 270 485 288 509 289
+               C498 267 500 240 518 220"/>
+
+          <!-- flower center -->
+          <path class="draw-line"
+            d="M331 216
+               C348 205 371 208 385 221
+               C398 234 397 256 382 269
+               C367 282 344 281 329 269
+               C314 257 315 228 331 216Z"/>
+
+          <!-- left leaves -->
+          <path class="draw-line"
+            d="M251 254 C221 249 190 235 165 213
+               C167 245 188 272 221 282"/>
+
+          <path class="draw-line"
+            d="M242 290 C210 278 178 281 150 297
+               C180 314 211 317 241 307"/>
+
+          <path class="draw-line"
+            d="M231 332 C198 329 171 341 151 365
+               C183 369 212 359 236 344"/>
+
+          <!-- right leaves -->
+          <path class="draw-line"
+            d="M499 319 C531 302 557 305 579 322
+               C559 338 531 343 502 336"/>
+
+          <path class="draw-line"
+            d="M473 345 C506 342 534 353 551 377
+               C520 379 493 368 470 354"/>
+
+          <path class="draw-line"
+            d="M458 373 C488 380 510 398 520 424
+               C491 416 469 400 451 382"/>
+
+          <!-- floating stems -->
+          <path class="draw-line"
+            d="M205 222 C185 190 184 153 200 120
+               C211 97 225 83 238 65"/>
+
+          <path class="draw-line"
+            d="M489 261 C496 224 515 190 543 166"/>
+
+          <path class="draw-line"
+            d="M355 813 C330 795 313 772 307 746"/>
+
+          <!-- lower botanical leaves -->
+          <path class="draw-line"
+            d="M356 813 C363 778 383 752 414 737
+               C415 766 393 795 356 813Z"/>
+
+          <path class="draw-line"
+            d="M373 778 C405 765 435 769 457 786
+               C429 801 400 798 373 778Z"/>
+
+          <path class="draw-line"
+            d="M258 814 C232 789 218 762 218 733
+               C244 748 259 777 258 814Z"/>
+
+        </svg>
+
+        <div class="art-caption">
+          <span>01</span>
+          <span>THE AMOURA WOMAN</span>
+        </div>
+      </div>
+
+      <div class="hero-location">
+        <span>INDIA</span>
+        <span>EST. 2026</span>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section section-pad" id="about">
+
+      <div class="section-label reveal">
+        <span>01</span>
+        <span>ABOUT AMOURA</span>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-title reveal">
+          <p class="script-title">The art of</p>
+          <h2>feeling<br><em>beautiful.</em></h2>
+        </div>
+
+        <div class="about-copy reveal-delay">
+          <p class="large-copy">
+            Amoura is a beauty destination shaped around individuality,
+            detail and effortless elegance.
+          </p>
+
+          <p>
+            We believe beauty should never feel rushed or overdone.
+            Every colour, cut, texture and finishing touch is considered
+            with intention — so the final result still feels like you.
+          </p>
+
+          <a href="contact.html" class="text-arrow">
+            Discover our space <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="about-image reveal-image">
+        <div class="image-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1600&q=85"
+            alt="Luxury salon interior">
+        </div>
+
+        <div class="image-note">
+          <span>AMOURA</span>
+          <span>A PLACE TO PAUSE</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- DARK SERVICES -->
+    <section class="services-section" id="services">
+
+      <div class="service-top section-pad">
+        <div class="section-label light reveal">
+          <span>02</span>
+          <span>OUR SERVICES</span>
+        </div>
+
+        <div class="service-heading reveal">
+          <p class="script-title light-script">Made for</p>
+          <h2>your kind<br>of <em>beautiful.</em></h2>
+        </div>
+      </div>
+
+      <div class="service-art">
+
+        <!-- decorative original line art -->
+        <svg viewBox="0 0 500 450" class="service-face" xmlns="http://www.w3.org/2000/svg">
+          <path class="draw-line light-line"
+            d="M270 70
+               C221 89 191 137 194 195
+               C196 241 218 263 243 282
+               C261 295 266 310 257 329
+               C247 350 221 363 202 378
+               C181 395 184 421 207 433
+               C239 449 297 434 337 409
+               C375 385 393 357 387 326
+               C382 301 363 286 342 274
+               C324 263 315 250 322 232
+               C329 213 351 204 360 184
+               C370 161 364 132 347 112"/>
+
+          <path class="draw-line light-line"
+            d="M194 195 C174 199 158 212 155 225
+               C153 237 165 242 181 236"/>
+
+          <path class="draw-line light-line"
+            d="M231 252 C247 243 266 244 278 254"/>
+
+          <path class="draw-line light-line"
+            d="M235 302 C250 293 269 294 282 304
+               C267 314 250 314 235 302Z"/>
+
+          <path class="draw-line light-line"
+            d="M194 136 C165 116 147 88 148 58
+               C172 69 193 90 205 117"/>
+
+          <path class="draw-line light-line"
+            d="M228 98 C215 69 224 40 247 22
+               C254 51 249 74 238 96"/>
+
+          <path class="draw-line light-line"
+            d="M284 75 C285 42 304 19 333 12
+               C328 42 313 64 293 81"/>
+
+          <path class="draw-line light-line"
+            d="M338 106 C356 78 382 68 410 75
+               C396 101 370 115 342 116"/>
+
+          <path class="draw-line light-line"
+            d="M350 136 C381 124 410 133 428 155
+               C398 160 372 151 351 141"/>
+        </svg>
+
+      </div>
+
+      <div class="services-list">
+
+        <a href="enquiry.html" class="service-item reveal">
+          <span class="service-number">01</span>
+          <div class="service-name">
+            <h3>Hair</h3>
+            <p>Cut • Colour • Styling • Rituals</p>
+          </div>
+          <span class="service-arrow">↗</span>
+        </a>
+
+        <a href="enquiry.html" class="service-item reveal">
+          <span class="service-number">02</span>
+          <div class="service-name">
+            <h3>Makeup</h3>
+            <p>Bridal • Occasion • Editorial</p>
+          </div>
+          <span class="service-arrow">↗</span>
+        </a>
+
+        <a href="enquiry.html" class="service-item reveal">
+          <span class="service-number">03</span>
+          <div class="service-name">
+            <h3>Skin</h3>
+            <p>Facials • Glow • Treatments</p>
+          </div>
+          <span class="service-arrow">↗</span>
+        </a>
+
+        <a href="enquiry.html" class="service-item reveal">
+          <span class="service-number">04</span>
+          <div class="service-name">
+            <h3>Nails</h3>
+            <p>Manicure • Gel • Art</p>
+          </div>
+          <span class="service-arrow">↗</span>
+        </a>
+
+      </div>
+
+      <div class="service-cta">
+        <a href="price.html" class="outline-button light-button">
+          <span>See all services</span>
+          <b>↗</b>
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- NUMBERS -->
+    <section class="numbers-section section-pad">
+
+      <div class="section-label reveal">
+        <span>03</span>
+        <span>THE AMOURA EXPERIENCE</span>
+      </div>
+
+      <div class="numbers-grid">
+
+        <div class="number-card reveal">
+          <strong class="counter" data-target="15">0</strong><sup>+</sup>
+          <p>Years of<br>experience</p>
+        </div>
+
+        <div class="number-card reveal">
+          <strong class="counter" data-target="20000">0</strong><sup>+</sup>
+          <p>Happy<br>clients</p>
+        </div>
+
+        <div class="number-card reveal">
+          <strong class="counter" data-target="4">0</strong><sup>m</sup>
+          <p>Beauty moments<br>created</p>
+        </div>
+
+      </div>
+
+      <div class="numbers-copy reveal">
+        <p>
+          Years of listening, learning and refining the little things
+          that make a beauty experience feel extraordinary.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- WORK GALLERY -->
+    <section class="home-gallery section-pad">
+
+      <div class="gallery-heading">
+
+        <div class="section-label reveal">
+          <span>04</span>
+          <span>OUR WORK GALLERY</span>
+        </div>
+
+        <div class="gallery-heading-row">
+          <div>
+            <p class="script-title reveal">A little</p>
+            <h2 class="reveal">visual<br><em>inspiration.</em></h2>
+          </div>
+
+          <a href="gallery.html" class="circle-link reveal">
+            <span>View<br>gallery</span>
+            <b>↗</b>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="home-gallery-grid">
+
+        <a href="gallery.html" class="gallery-card card-large reveal-image">
+          <div class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=85" alt="Beauty portrait">
+          </div>
+          <div class="gallery-meta">
+            <span>01</span>
+            <span>EDITORIAL BEAUTY</span>
+          </div>
+        </a>
+
+        <a href="gallery.html" class="gallery-card card-small reveal-image delay-1">
+          <div class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85" alt="Fashion beauty">
+          </div>
+          <div class="gallery-meta">
+            <span>02</span>
+            <span>TEXTURE</span>
+          </div>
+        </a>
+
+        <a href="gallery.html" class="gallery-card card-medium reveal-image delay-2">
+          <div class="gallery-image">
+            <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1000&q=85" alt="Hair styling">
+          </div>
+          <div class="gallery-meta">
+            <span>03</span>
+            <span>HAIR ARTISTRY</span>
+          </div>
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- BRANDS -->
+    <section class="brands-section section-pad">
+
+      <div class="section-label reveal">
+        <span>05</span>
+        <span>BRANDS WE LOVE</span>
+      </div>
+
+      <div class="brands-intro reveal">
+        <h2>Only the<br><em>good stuff.</em></h2>
+        <p>
+          Thoughtfully selected professional products that respect
+          the craft and your hair, skin and nails.
+        </p>
+      </div>
+
+      <div class="brand-marquee">
+        <div class="brand-track">
+          <span>L'ORÉAL</span>
+          <i>•</i>
+          <span>OLAPLEX</span>
+          <i>•</i>
+          <span>KÉRASTASE</span>
+          <i>•</i>
+          <span>MAC</span>
+          <i>•</i>
+          <span>LAKME</span>
+          <i>•</i>
+          <span>L'ORÉAL</span>
+          <i>•</i>
+          <span>OLAPLEX</span>
+          <i>•</i>
+          <span>KÉRASTASE</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- TESTIMONIAL -->
+    <section class="testimonial-section">
+
+      <div class="testimonial-art">
+        <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+          <path class="draw-line"
+            d="M195 58
+               C155 79 131 119 132 164
+               C133 204 151 225 172 241
+               C187 252 193 264 187 280
+               C179 299 154 313 139 329
+               C122 347 131 370 154 377
+               C190 388 241 370 265 349
+               C291 327 299 302 291 278
+               C285 259 270 247 254 238
+               C240 229 235 218 241 202
+               C248 184 267 174 272 155
+               C278 132 269 105 251 88"/>
+
+          <path class="draw-line"
+            d="M132 164 C113 167 97 180 94 193
+               C91 204 103 209 118 203"/>
+
+          <path class="draw-line"
+            d="M161 222 C176 213 193 213 206 222"/>
+
+          <path class="draw-line"
+            d="M165 264 C180 255 196 256 207 266
+               C194 274 178 274 165 264Z"/>
+
+          <path class="draw-line"
+            d="M133 116 C108 96 93 72 94 43
+               C117 53 135 76 143 103"/>
+
+          <path class="draw-line"
+            d="M168 78 C158 52 167 26 189 11
+               C195 37 189 60 178 79"/>
+
+          <path class="draw-line"
+            d="M220 67 C223 38 242 18 267 15
+               C261 42 246 61 228 72"/>
+
+        </svg>
+      </div>
+
+      <div class="testimonial-content reveal">
+
+        <span class="quote-mark">“</span>
+
+        <p class="testimonial-quote">
+          The whole experience feels different.
+          Calm, personal and incredibly thoughtful.
+          I left feeling like the best version of myself.
+        </p>
+
+        <div class="testimonial-author">
+          <span></span>
+          <div>
+            <strong>AMOURA CLIENT</strong>
+            <small>VERIFIED EXPERIENCE</small>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT CTA -->
+    <section class="contact-cta section-pad">
+
+      <div class="section-label reveal">
+        <span>06</span>
+        <span>COME SAY HELLO</span>
+      </div>
+
+      <div class="contact-cta-inner">
+
+        <div class="reveal">
+          <p class="script-title">Let's create</p>
+          <h2>something<br><em>beautiful.</em></h2>
+        </div>
+
+        <div class="contact-cta-side reveal-delay">
+          <p>
+            Ready for your next appointment?
+            Tell us what you're imagining and we'll take it from there.
+          </p>
+
+          <a href="enquiry.html" class="dark-round-button">
+            <span>Book<br>with us</span>
+            <b>↗</b>
+          </a>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="footer-logo">Amoura</div>
+        <p>Beauty, beautifully considered.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="price.html">Price List</a>
+        <a href="contact.html">Contact</a>
+        <a href="enquiry.html">Appointment</a>
+      </div>
+
+      <div class="footer-contact">
+        <span>GET IN TOUCH</span>
+        <a href="tel:+919999999999">+91 99999 99999</a>
+        <a href="mailto:hello@amoura.in">hello@amoura.in</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 AMOURA</span>
+      <span>HAIR • BEAUTY • WELLNESS</span>
+      <span>MADE WITH INTENTION</span>
+    </div>
+
+  </footer>
+
+
+  <!-- FLOATING CONNECT -->
+  <div class="floating-connect">
+    <a href="enquiry.html" class="connect-bubble">Connect!</a>
+    <a href="https://wa.me/919999999999" class="whatsapp-bubble" aria-label="WhatsApp">
+      <span>◔</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
