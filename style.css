@@ -1,0 +1,1222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #e9eee5;
+  color: #303b37;
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 86px;
+  padding: 0 6vw;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 1000;
+
+  background: rgba(233, 238, 229, .86);
+  backdrop-filter: blur(14px);
+
+  transition: .4s ease;
+}
+
+.site-header.scrolled {
+  box-shadow: 0 8px 30px rgba(48, 59, 55, .08);
+}
+
+.logo {
+  font-family: "Italianno", cursive;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+
+/* MENU BUTTON */
+
+.menu-btn {
+  width: 48px;
+  height: 48px;
+
+  border: 0;
+  background: transparent;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 7px;
+
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  height: 1px;
+  background: #303b37;
+
+  transition: .4s ease;
+}
+
+.menu-btn span:first-child {
+  width: 31px;
+}
+
+.menu-btn span:last-child {
+  width: 21px;
+}
+
+
+/* =====================================================
+   SIDE MENU
+===================================================== */
+
+.side-menu {
+  position: fixed;
+
+  top: 0;
+  right: -100%;
+
+  width: min(470px, 100%);
+  height: 100vh;
+
+  background: #303b37;
+  color: #f7f8f2;
+
+  z-index: 3000;
+
+  padding: 110px 55px 60px;
+
+  overflow-y: auto;
+
+  transition:
+    right .65s cubic-bezier(.77,0,.18,1);
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.close-menu {
+  position: absolute;
+
+  top: 25px;
+  right: 30px;
+
+  border: 0;
+  background: transparent;
+
+  color: #f7f8f2;
+
+  font-size: 42px;
+  font-weight: 200;
+
+  cursor: pointer;
+}
+
+.side-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.side-menu nav a {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 32px;
+  font-weight: 300;
+
+  line-height: 1.2;
+
+  transition:
+    padding-left .35s ease,
+    opacity .35s ease;
+}
+
+.side-menu nav a:hover {
+  padding-left: 12px;
+  opacity: .65;
+}
+
+
+/* =====================================================
+   COMMON TYPOGRAPHY
+===================================================== */
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   HOME HERO
+===================================================== */
+
+.hero {
+  min-height: 100vh;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+
+  inset: 0;
+
+  background-position: center;
+  background-size: cover;
+
+  transform: scale(1.04);
+
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20,28,25,.62),
+      rgba(20,28,25,.12)
+    );
+
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  color: #fff;
+
+  padding: 150px 8vw 90px;
+
+  max-width: 850px;
+}
+
+.hero-content h1 {
+  font-size: clamp(75px, 14vw, 170px);
+
+  line-height: .75;
+
+  margin: 30px 0;
+
+  letter-spacing: -4px;
+}
+
+.hero-content h1 em {
+  font-family: "Italianno", cursive;
+  font-style: normal;
+
+  letter-spacing: 0;
+}
+
+.hero-content p {
+  max-width: 420px;
+
+  font-size: 14px;
+  line-height: 1.9;
+
+  opacity: .85;
+}
+
+
+/* =====================================================
+   HOME ABOUT
+===================================================== */
+
+.about {
+  padding: 140px 8vw;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+.about h2 {
+  font-size: clamp(65px, 9vw, 115px);
+
+  line-height: .78;
+
+  margin-top: 30px;
+}
+
+.about h2 em {
+  font-family: "Italianno", cursive;
+  font-style: normal;
+}
+
+.about-text {
+  max-width: 470px;
+
+  font-size: 15px;
+
+  line-height: 2;
+}
+
+
+/* =====================================================
+   BOTANICAL FACE LINE ART
+===================================================== */
+
+/*
+   This is VECTOR LINE ART.
+   No image is used.
+   script.js creates the SVG.
+*/
+
+.line-art,
+.about-art {
+  width: 100%;
+
+  min-height: 650px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  position: relative;
+}
+
+.line-art svg,
+.about-art svg {
+  width: min(100%, 650px);
+  height: auto;
+
+  overflow: visible;
+
+  transform:
+    translateY(35px)
+    scale(.94);
+
+  opacity: 0;
+
+  transition:
+    opacity 1.4s ease,
+    transform 1.5s cubic-bezier(.2,.7,.2,1);
+}
+
+.line-art.active svg,
+.about-art.active svg {
+  opacity: 1;
+
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+.botanical-line {
+  fill: none;
+
+  stroke: #303b37;
+
+  stroke-width: 2.2;
+
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  vector-effect: non-scaling-stroke;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services {
+  background: #303b37;
+
+  color: #f7f8f2;
+
+  padding: 140px 7vw;
+}
+
+.services-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 40px;
+
+  margin-bottom: 80px;
+}
+
+.services h2 {
+  font-size: clamp(65px, 10vw, 120px);
+
+  line-height: .76;
+}
+
+.services h2 em {
+  font-family: "Italianno", cursive;
+  font-style: normal;
+}
+
+.services-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  border-top: 1px solid rgba(247,248,242,.3);
+}
+
+.service-item {
+  padding: 45px 20px 45px 0;
+
+  border-bottom: 1px solid rgba(247,248,242,.3);
+
+  transition: .4s ease;
+}
+
+.service-item:nth-child(odd) {
+  border-right: 1px solid rgba(247,248,242,.3);
+  padding-right: 40px;
+}
+
+.service-item:nth-child(even) {
+  padding-left: 40px;
+}
+
+.service-item:hover {
+  padding-left: 12px;
+}
+
+.service-item h3 {
+  font-size: 38px;
+
+  margin-bottom: 12px;
+}
+
+.service-item p {
+  opacity: .6;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+  padding: 130px 7vw;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.stat {
+  border-top: 1px solid #303b37;
+
+  padding-top: 25px;
+}
+
+.stat-number {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(65px, 9vw, 110px);
+
+  line-height: .8;
+
+  font-weight: 300;
+}
+
+.stat-label {
+  display: block;
+
+  margin-top: 25px;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   GALLERY PAGE
+===================================================== */
+
+.gallery-hero {
+  min-height: 78vh;
+
+  background: #303b37;
+
+  color: #f7f8f2;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  padding: 150px 7vw 80px;
+}
+
+.gallery-hero h1 {
+  font-size: clamp(75px, 16vw, 180px);
+
+  line-height: .72;
+
+  margin: 30px 0 45px;
+
+  letter-spacing: -4px;
+}
+
+.gallery-hero h1 em {
+  font-family: "Italianno", cursive;
+
+  font-style: normal;
+
+  letter-spacing: 0;
+}
+
+.hero-description {
+  max-width: 380px;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  opacity: .75;
+}
+
+
+/* GALLERY INTRO */
+
+.gallery-intro {
+  padding: 130px 8vw 100px;
+}
+
+.gallery-intro h2 {
+  font-size: clamp(60px, 10vw, 110px);
+
+  line-height: .82;
+
+  margin: 30px 0 45px;
+}
+
+.gallery-intro h2 em {
+  font-family: "Italianno", cursive;
+
+  font-style: normal;
+}
+
+.gallery-intro > p:last-child {
+  max-width: 500px;
+
+  font-size: 15px;
+
+  line-height: 1.9;
+}
+
+
+/* GALLERY GRID */
+
+.amoura-gallery {
+  padding: 20px 6vw 130px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 25px;
+
+  align-items: start;
+}
+
+.gallery-card {
+  position: relative;
+
+  height: 500px;
+
+  overflow: hidden;
+
+  background: #303b37;
+}
+
+.gallery-card.tall {
+  height: 650px;
+}
+
+.gallery-card.wide {
+  grid-column: span 2;
+
+  height: 520px;
+}
+
+
+/*
+   IMPORTANT:
+   Images are visible immediately.
+*/
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transition:
+    transform 1.2s cubic-bezier(.2,.7,.2,1),
+    filter 1s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.07);
+
+  filter: brightness(.82);
+}
+
+.gallery-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 45%;
+
+  background:
+    linear-gradient(
+      transparent,
+      rgba(0,0,0,.7)
+    );
+
+  pointer-events: none;
+}
+
+.image-number {
+  position: absolute;
+
+  top: 22px;
+  left: 22px;
+
+  z-index: 3;
+
+  color: #fff;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+.image-title {
+  position: absolute;
+
+  left: 25px;
+  bottom: 25px;
+
+  z-index: 3;
+
+  color: #fff;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 30px;
+
+  font-weight: 300;
+}
+
+
+/* =====================================================
+   GALLERY ANIMATION
+===================================================== */
+
+.reveal {
+  opacity: 0;
+
+  transform: translateY(70px);
+
+  transition:
+    opacity 1s ease,
+    transform 1s cubic-bezier(.2,.7,.2,1);
+}
+
+.reveal.active {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   GALLERY CTA
+===================================================== */
+
+.gallery-cta {
+  background: #303b37;
+
+  color: #f7f8f2;
+
+  text-align: center;
+
+  padding: 150px 7vw;
+}
+
+.gallery-cta h2 {
+  font-size: clamp(60px, 10vw, 110px);
+
+  line-height: .82;
+
+  margin: 30px 0 60px;
+}
+
+.gallery-cta h2 em {
+  font-family: "Italianno", cursive;
+
+  font-style: normal;
+}
+
+.gallery-cta a {
+  display: inline-block;
+
+  border: 1px solid rgba(255,255,255,.7);
+
+  padding: 18px 35px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  transition: .4s ease;
+}
+
+.gallery-cta a:hover {
+  background: #f7f8f2;
+
+  color: #303b37;
+}
+
+
+/* =====================================================
+   PRICE PAGE
+===================================================== */
+
+.price-page {
+  padding: 160px 8vw 120px;
+}
+
+.price-page h1 {
+  font-size: clamp(75px, 13vw, 160px);
+
+  line-height: .75;
+
+  margin: 30px 0 100px;
+}
+
+.price-page h1 em {
+  font-family: "Italianno", cursive;
+  font-style: normal;
+}
+
+.price-category {
+  border-top: 1px solid #303b37;
+
+  padding: 35px 0 60px;
+}
+
+.price-category h2 {
+  font-size: 55px;
+
+  margin-bottom: 30px;
+}
+
+.price-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid rgba(48,59,55,.2);
+
+  font-size: 14px;
+}
+
+.price-row span:last-child {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-page {
+  padding: 160px 8vw 120px;
+}
+
+.contact-page h1 {
+  font-size: clamp(75px, 14vw, 170px);
+
+  line-height: .75;
+
+  margin: 30px 0 90px;
+}
+
+.contact-page h1 em {
+  font-family: "Italianno", cursive;
+  font-style: normal;
+}
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+}
+
+.contact-info {
+  font-size: 15px;
+
+  line-height: 2;
+}
+
+.contact-info h2 {
+  font-size: 50px;
+
+  margin-bottom: 25px;
+}
+
+.contact-image {
+  width: 100%;
+
+  height: 600px;
+
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   ENQUIRY
+===================================================== */
+
+.enquiry-page {
+  padding: 160px 8vw 120px;
+}
+
+.enquiry-page h1 {
+  font-size: clamp(75px, 14vw, 170px);
+
+  line-height: .75;
+
+  margin: 30px 0 90px;
+}
+
+.enquiry-page h1 em {
+  font-family: "Italianno", cursive;
+  font-style: normal;
+}
+
+.enquiry-form {
+  max-width: 850px;
+}
+
+.form-group {
+  margin-bottom: 35px;
+}
+
+.form-group label {
+  display: block;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 12px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+
+  border: 0;
+
+  border-bottom: 1px solid #303b37;
+
+  background: transparent;
+
+  padding: 14px 0;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  outline: none;
+
+  color: #303b37;
+}
+
+.form-group textarea {
+  min-height: 120px;
+
+  resize: vertical;
+}
+
+.submit-btn {
+  border: 1px solid #303b37;
+
+  background: transparent;
+
+  color: #303b37;
+
+  padding: 18px 35px;
+
+  letter-spacing: 3px;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition: .4s ease;
+}
+
+.submit-btn:hover {
+  background: #303b37;
+
+  color: #f7f8f2;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+  background: #303b37;
+
+  color: #f7f8f2;
+
+  border-top: 1px solid rgba(255,255,255,.15);
+
+  text-align: center;
+
+  padding: 90px 7vw 45px;
+}
+
+.footer-logo {
+  font-family: "Italianno", cursive;
+
+  font-size: 68px;
+}
+
+.site-footer p {
+  margin: 15px 0 35px;
+
+  opacity: .7;
+
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-bottom: 50px;
+}
+
+.footer-links a {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+}
+
+.site-footer small {
+  opacity: .4;
+
+  font-size: 9px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    height: 72px;
+
+    padding: 0 6vw;
+  }
+
+  .logo {
+    font-size: 44px;
+  }
+
+  .side-menu {
+    padding: 100px 35px 50px;
+  }
+
+  .side-menu nav a {
+    font-size: 29px;
+  }
+
+
+  /* HOME */
+
+  .hero-content {
+    padding: 140px 7vw 70px;
+  }
+
+  .hero-content h1 {
+    font-size: 82px;
+
+    letter-spacing: -2px;
+  }
+
+  .about {
+    padding: 100px 7vw;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 50px;
+  }
+
+  .about h2 {
+    font-size: 70px;
+  }
+
+
+  /* BIG LINE ART */
+
+  .line-art,
+  .about-art {
+    min-height: 540px;
+  }
+
+  .line-art svg,
+  .about-art svg {
+    width: 120%;
+
+    max-width: none;
+  }
+
+
+  /* SERVICES */
+
+  .services {
+    padding: 100px 7vw;
+  }
+
+  .services-header {
+    display: block;
+
+    margin-bottom: 60px;
+  }
+
+  .services h2 {
+    font-size: 70px;
+
+    margin-top: 25px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item:nth-child(odd) {
+    border-right: 0;
+
+    padding-right: 0;
+  }
+
+  .service-item:nth-child(even) {
+    padding-left: 0;
+  }
+
+  .service-item h3 {
+    font-size: 34px;
+  }
+
+
+  /* STATS */
+
+  .stats {
+    padding: 100px 7vw;
+
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+
+  /* GALLERY */
+
+  .gallery-hero {
+    min-height: 75vh;
+
+    padding: 130px 7vw 65px;
+  }
+
+  .gallery-hero h1 {
+    font-size: 82px;
+
+    letter-spacing: -2px;
+  }
+
+  .gallery-intro {
+    padding: 100px 7vw 80px;
+  }
+
+  .gallery-intro h2 {
+    font-size: 68px;
+  }
+
+  .amoura-gallery {
+    padding: 10px 5vw 90px;
+
+    gap: 15px;
+  }
+
+  .gallery-card {
+    height: 310px;
+  }
+
+  .gallery-card.tall {
+    height: 430px;
+  }
+
+  .gallery-card.wide {
+    height: 300px;
+  }
+
+  .image-title {
+    font-size: 22px;
+
+    left: 18px;
+    bottom: 18px;
+  }
+
+  .image-number {
+    left: 18px;
+    top: 18px;
+  }
+
+
+  /* PRICE */
+
+  .price-page {
+    padding: 130px 7vw 90px;
+  }
+
+  .price-page h1 {
+    font-size: 82px;
+
+    margin-bottom: 70px;
+  }
+
+  .price-category h2 {
+    font-size: 45px;
+  }
+
+  .price-row {
+    font-size: 13px;
+  }
+
+
+  /* CONTACT */
+
+  .contact-page {
+    padding: 130px 7vw 90px;
+  }
+
+  .contact-page h1 {
+    font-size: 82px;
+
+    margin-bottom: 60px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .contact
