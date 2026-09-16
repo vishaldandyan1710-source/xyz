@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width,initial-scale=1.0">
+
+<title>Enquiry — Ciao Bella</title>
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet">
+
+<link rel="stylesheet"
+      href="style.css">
+
+</head>
+
+
+<body data-page="enquiry">
+
+
+<header class="nav-wrap solid">
+
+<nav class="nav">
+
+<a class="brand" href="index.html">
+
+<span>CIAO</span>
+<b>BELLA</b>
+
+</a>
+
+
+<button class="menu-btn">
+
+<i></i>
+<i></i>
+
+</button>
+
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a class="active" href="enquiry.html">Enquiry</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+
+<a class="nav-cta"
+   href="enquiry.html">
+
+Book a Visit
+<span>↗</span>
+
+</a>
+
+</nav>
+
+</header>
+
+
+
+<main>
+
+
+<section class="page-hero enquiry-head">
+
+<p class="eyebrow reveal">
+LET'S CREATE YOUR LOOK
+</p>
+
+<h1 class="display reveal">
+
+Make an<br>
+<em>enquiry.</em>
+
+</h1>
+
+<p class="page-intro reveal">
+
+Tell us what you're looking for and
+our team can help you plan your visit.
+
+</p>
+
+</section>
+
+
+
+<section class="form-section section-pad">
+
+
+<form id="enquiryForm"
+      class="luxury-form">
+
+
+<div class="form-intro">
+
+<span>01</span>
+
+<h2>
+Your details
+</h2>
+
+</div>
+
+
+
+<label>
+
+Full name
+
+<input required
+       name="name"
+       placeholder="Your name">
+
+</label>
+
+
+
+<label>
+
+Phone number
+
+<input required
+       name="phone"
+       type="tel"
+       placeholder="+91">
+
+</label>
+
+
+
+<label>
+
+Email address
+
+<input name="email"
+       type="email"
+       placeholder="you@example.com">
+
+</label>
+
+
+
+<div class="form-row">
+
+
+<label>
+
+Service
+
+<select name="service">
+
+<option>
+Haircuts & Styling
+</option>
+
+<option>
+Hair Colour & Highlights
+</option>
+
+<option>
+Facials & Skin Care
+</option>
+
+<option>
+Manicure & Pedicure
+</option>
+
+<option>
+Acrylic Nails
+</option>
+
+<option>
+Makeup Services
+</option>
+
+<option>
+Bridal & Special Occasion Styling
+</option>
+
+<option>
+Waxing
+</option>
+
+<option>
+Eyebrow Shaping & Tinting
+</option>
+
+<option>
+Beard & Grooming
+</option>
+
+</select>
+
+</label>
+
+
+
+<label>
+
+Preferred date
+
+<input name="date"
+       type="date">
+
+</label>
+
+
+</div>
+
+
+
+<label>
+
+Message
+
+<textarea name="message"
+          rows="5"
+          placeholder="Tell us what you'd like to book..."></textarea>
+
+</label>
+
+
+
+<button class="btn btn-gold submit-btn"
+        type="submit">
+
+Send Enquiry
+<span>↗</span>
+
+</button>
+
+
+<p class="form-note">
+
+Your enquiry will open WhatsApp with
+the details filled in for Ciao Bella.
+
+</p>
+
+
+</form>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+<div class="footer-main">
+
+<div>
+
+<a class="brand big"
+   href="index.html">
+
+<span>CIAO</span>
+<b>BELLA</b>
+
+</a>
+
+<p>
+Luxury beauty, thoughtfully done.
+</p>
+
+</div>
+
+
+<div>
+
+<h4>EXPLORE</h4>
+
+<a href="services.html">
+Services
+</a>
+
+<a href="gallery.html">
+Gallery
+</a>
+
+<a href="contact.html">
+Contact
+</a>
+
+</div>
+
+
+<div>
+
+<h4>VISIT</h4>
+
+<p>
+SCO 496, 35C<br>
+Sector 35, Chandigarh<br>
+160022
+</p>
+
+</div>
+
+
+<div>
+
+<h4>CONNECT</h4>
+
+<a href="tel:+919888955800">
++91 98889 55800
+</a>
+
+<a href="https://instagram.com/ciaobellachd"
+   target="_blank">
+
+@ciaobellachd
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+<span>© 2026 CIAO BELLA</span>
+
+<button id="adminOpen">
+ADMIN
+</button>
+
+<span>
+CHANDIGARH · INDIA
+</span>
+
+</div>
+
+</footer>
+
+
+
+<div id="adminPanel"
+     class="admin-panel"
+     aria-hidden="true">
+
+<div class="admin-box">
+
+<button class="admin-close"
+        id="adminClose">
+×
+</button>
+
+<p class="eyebrow">
+PRIVATE AREA
+</p>
+
+<h2>
+Image <em>Studio</em>
+</h2>
+
+
+<div id="adminLogin">
+
+<p>
+Enter your admin password to edit image URLs.
+</p>
+
+<input id="adminPassword"
+       type="password"
+       placeholder="Password">
+
+<button class="btn btn-gold"
+        id="adminLoginBtn">
+
+Unlock
+
+</button>
+
+<small id="adminError"></small>
+
+</div>
+
+
+<div id="adminEditor"
+     hidden>
+
+<p class="admin-note">
+Edit image URLs used across the site.
+</p>
+
+<div id="imageFields"></div>
+
+<button class="btn btn-gold"
+        id="saveImages">
+
+Save Changes
+
+</button>
+
+<button class="admin-reset"
+        id="resetImages">
+
+Reset demo images
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
