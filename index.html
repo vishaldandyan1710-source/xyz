@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eef2e8">
+  <meta name="description" content="APSARA — A modern beauty salon where beauty is beautifully considered.">
+  <title>APSARA — Beauty Atelier</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600&family=Italianno&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="loader" id="loader">
+    <div class="loader-logo">Apsara</div>
+    <div class="loader-subtitle">BEAUTY ATELIER</div>
+    <div class="loader-line"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+
+    <a href="#home" class="logo" data-route aria-label="Apsara home">
+      <span class="logo-script">Apsara</span>
+      <span class="logo-subtitle">HAIR • BEAUTY • WELLNESS</span>
+    </a>
+
+    <div class="header-right">
+      <span class="header-location">INDIA / EST. 2026</span>
+
+      <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+  </header>
+
+  <!-- NAVIGATION DRAWER -->
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <aside class="navigation" id="navigation">
+
+    <div class="navigation-top">
+      <span class="navigation-label">MENU</span>
+
+      <button class="close-button" id="closeButton" aria-label="Close navigation">
+        ×
+      </button>
+    </div>
+
+    <nav class="navigation-links">
+
+      <a href="#home" data-route>
+        <span>01</span>
+        <strong>Home</strong>
+      </a>
+
+      <a href="#gallery" data-route>
+        <span>02</span>
+        <strong>Our Gallery</strong>
+      </a>
+
+      <a href="#services" data-route>
+        <span>03</span>
+        <strong>Our Services</strong>
+      </a>
+
+      <a href="#contact" data-route>
+        <span>04</span>
+        <strong>Contact</strong>
+      </a>
+
+      <a href="#enquiry" data-route>
+        <span>05</span>
+        <strong>Book Appointment</strong>
+      </a>
+
+    </nav>
+
+    <div class="navigation-bottom">
+      <p>Beauty, beautifully considered.</p>
+      <span>APSARA BEAUTY ATELIER</span>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main id="app"></main>
+
+  <!-- FLOATING CONTACT -->
+  <a class="floating-contact" href="#contact" data-route aria-label="Contact Apsara">
+    <span>Connect!</span>
+    <span class="floating-arrow">↗</span>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+
+    <div class="footer-main">
+
+      <div class="footer-brand">
+        <span class="logo-script">Apsara</span>
+        <span class="logo-subtitle">HAIR • BEAUTY • WELLNESS</span>
+      </div>
+
+      <div class="footer-message">
+        Beauty is an experience,<br>
+        not just a service.
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <span>© <span id="year"></span> Apsara Beauty Atelier</span>
+
+      <div class="footer-links">
+        <a href="#home" data-route>Home</a>
+        <a href="#gallery" data-route>Gallery</a>
+        <a href="#services" data-route>Services</a>
+        <a href="#contact" data-route>Contact</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
