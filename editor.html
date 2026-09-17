@@ -1,0 +1,486 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Local visual editor for Apsara Beauty Atelier"
+  >
+
+  <title>Apsara — Visual Editor</title>
+
+  <link rel="stylesheet" href="editor.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       EDITOR HEADER
+  ========================================== -->
+
+  <header class="editor-header">
+
+    <div class="editor-brand">
+      <span class="editor-brand-script">Apsara</span>
+
+      <div class="editor-brand-info">
+        <strong>VISUAL EDITOR</strong>
+        <span>LOCAL WEBSITE WORKSPACE</span>
+      </div>
+    </div>
+
+    <div class="editor-header-actions">
+
+      <button
+        class="editor-button secondary"
+        id="refreshPreviewButton"
+        type="button"
+      >
+        ↻ Refresh
+      </button>
+
+      <button
+        class="editor-button secondary"
+        id="resetAllButton"
+        type="button"
+      >
+        Reset edits
+      </button>
+
+      <button
+        class="editor-button primary"
+        id="exportProjectButton"
+        type="button"
+      >
+        Export project
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       MAIN EDITOR LAYOUT
+  ========================================== -->
+
+  <main class="editor-layout">
+
+    <!-- LEFT SIDEBAR -->
+
+    <aside class="editor-sidebar">
+
+      <section class="sidebar-section">
+
+        <span class="sidebar-eyebrow">
+          WORKSPACE
+        </span>
+
+        <h1>
+          Edit your<br>
+          <em>atelier.</em>
+        </h1>
+
+        <p class="sidebar-description">
+          Select an image in your website preview to replace
+          it with your own salon photography.
+        </p>
+
+      </section>
+
+
+      <section class="sidebar-section editor-status-section">
+
+        <div class="status-heading">
+          <span class="status-dot"></span>
+          <span>Editor status</span>
+        </div>
+
+        <p id="editorStatus">
+          Loading website preview...
+        </p>
+
+        <div class="status-count">
+          <span>Edited images</span>
+          <strong id="editedImageCount">0</strong>
+        </div>
+
+      </section>
+
+
+      <section class="sidebar-section">
+
+        <span class="sidebar-eyebrow">
+          QUICK ACTIONS
+        </span>
+
+        <div class="sidebar-actions">
+
+          <button
+            class="sidebar-action"
+            id="selectImageButton"
+            type="button"
+          >
+            <span>＋</span>
+            Replace an image
+          </button>
+
+          <button
+            class="sidebar-action"
+            id="importProjectButton"
+            type="button"
+          >
+            <span>↥</span>
+            Import project edits
+          </button>
+
+          <button
+            class="sidebar-action"
+            id="downloadAssetsButton"
+            type="button"
+          >
+            <span>↓</span>
+            Download edited images
+          </button>
+
+          <button
+            class="sidebar-action"
+            id="previewButton"
+            type="button"
+          >
+            <span>↗</span>
+            Focus website preview
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <section class="sidebar-section editor-instructions">
+
+        <span class="sidebar-eyebrow">
+          HOW TO USE
+        </span>
+
+        <ol>
+          <li>Open your website inside the preview.</li>
+          <li>Click any image.</li>
+          <li>Select a replacement image.</li>
+          <li>Save your edits locally.</li>
+          <li>Export your project backup.</li>
+        </ol>
+
+      </section>
+
+
+      <section class="sidebar-section sidebar-warning">
+
+        <strong>Local editor</strong>
+
+        <p>
+          Your original website files are not overwritten.
+          Export your changes before moving them into GitHub.
+        </p>
+
+      </section>
+
+    </aside>
+
+
+    <!-- PREVIEW AREA -->
+
+    <section class="preview-area">
+
+      <div class="preview-toolbar">
+
+        <div class="preview-heading">
+
+          <span class="sidebar-eyebrow">
+            LIVE PREVIEW
+          </span>
+
+          <strong id="previewTitle">
+            Apsara Beauty Atelier
+          </strong>
+
+        </div>
+
+        <div class="preview-controls">
+
+          <button
+            class="device-button active"
+            data-device="desktop"
+            type="button"
+          >
+            Desktop
+          </button>
+
+          <button
+            class="device-button"
+            data-device="tablet"
+            type="button"
+          >
+            Tablet
+          </button>
+
+          <button
+            class="device-button"
+            data-device="mobile"
+            type="button"
+          >
+            Mobile
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="preview-stage" id="previewStage">
+
+        <div
+          class="website-frame desktop-frame"
+          id="websiteFrameContainer"
+        >
+
+          <div class="frame-topbar">
+
+            <div class="frame-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="frame-address">
+              Local website preview
+            </div>
+
+            <span class="frame-lock">
+              LOCAL
+            </span>
+
+          </div>
+
+
+          <iframe
+            id="websiteFrame"
+            src="index.html?editorMode=true"
+            title="Apsara website preview"
+          ></iframe>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       IMAGE EDITOR MODAL
+  ========================================== -->
+
+  <div
+    class="modal-backdrop"
+    id="imageModalBackdrop"
+    aria-hidden="true"
+  >
+
+    <section
+      class="image-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="imageModalTitle"
+    >
+
+      <button
+        class="modal-close"
+        id="closeImageModalButton"
+        type="button"
+        aria-label="Close image editor"
+      >
+        ×
+      </button>
+
+
+      <div class="modal-heading">
+
+        <span class="sidebar-eyebrow">
+          IMAGE EDITOR
+        </span>
+
+        <h2 id="imageModalTitle">
+          Replace image
+        </h2>
+
+        <p id="selectedImageDetails">
+          Select a new image for this element.
+        </p>
+
+      </div>
+
+
+      <div class="image-comparison">
+
+        <div class="image-preview-box">
+
+          <span class="image-preview-label">
+            CURRENT
+          </span>
+
+          <img
+            id="currentImagePreview"
+            src=""
+            alt="Current image preview"
+          >
+
+        </div>
+
+
+        <div class="image-preview-box">
+
+          <span class="image-preview-label">
+            NEW IMAGE
+          </span>
+
+          <div
+            class="new-image-placeholder"
+            id="newImagePlaceholder"
+          >
+            <span>＋</span>
+            <small>Choose an image</small>
+          </div>
+
+          <img
+            id="newImagePreview"
+            src=""
+            alt="New image preview"
+            hidden
+          >
+
+        </div>
+
+      </div>
+
+
+      <div class="modal-field">
+
+        <label for="imageFileInput">
+          Choose replacement image
+        </label>
+
+        <input
+          id="imageFileInput"
+          type="file"
+          accept="image/*"
+        >
+
+        <small>
+          JPG, PNG, WEBP and other browser-supported image formats.
+        </small>
+
+      </div>
+
+
+      <div class="modal-field">
+
+        <label for="imageAltInput">
+          Image accessibility text
+        </label>
+
+        <input
+          id="imageAltInput"
+          type="text"
+          placeholder="Describe this image"
+        >
+
+      </div>
+
+
+      <div class="modal-actions">
+
+        <button
+          class="editor-button secondary"
+          id="resetSelectedImageButton"
+          type="button"
+        >
+          Reset this image
+        </button>
+
+        <div class="modal-actions-right">
+
+          <button
+            class="editor-button secondary"
+            id="cancelImageButton"
+            type="button"
+          >
+            Cancel
+          </button>
+
+          <button
+            class="editor-button primary"
+            id="saveImageButton"
+            type="button"
+            disabled
+          >
+            Save image
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- =========================================
+       IMPORT PROJECT INPUT
+  ========================================== -->
+
+  <input
+    id="importProjectInput"
+    type="file"
+    accept=".json,application/json"
+    hidden
+  >
+
+
+  <!-- =========================================
+       IMAGE SELECTION INPUT
+  ========================================== -->
+
+  <input
+    id="directImageInput"
+    type="file"
+    accept="image/*"
+    hidden
+  >
+
+
+  <!-- =========================================
+       NOTIFICATION
+  ========================================== -->
+
+  <div
+    class="editor-notification"
+    id="editorNotification"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+
+  <script src="editor.js"></script>
+
+</body>
+</html>
