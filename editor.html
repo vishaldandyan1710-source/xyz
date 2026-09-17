@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Apsara Visual Editor</title>
+
+  <link rel="stylesheet" href="editor.css">
+</head>
+
+<body>
+
+  <header class="editor-header">
+
+    <div class="editor-brand">
+      <span class="brand-mark">A</span>
+
+      <div>
+        <h1>Apsara Editor</h1>
+        <p>Visual website customization</p>
+      </div>
+    </div>
+
+    <div class="editor-actions">
+
+      <button id="previewButton"
+              class="editor-button secondary">
+        Preview
+      </button>
+
+      <button id="resetButton"
+              class="editor-button danger">
+        Reset Images
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main class="editor-layout">
+
+    <aside class="editor-sidebar">
+
+      <div class="sidebar-heading">
+        <span class="status-dot"></span>
+        <span>Editing mode</span>
+      </div>
+
+      <div class="sidebar-card">
+
+        <h2>Image Editor</h2>
+
+        <p>
+          Select an image inside your website preview
+          to replace it with your own image.
+        </p>
+
+      </div>
+
+
+      <div class="sidebar-card">
+
+        <h3>Instructions</h3>
+
+        <ol class="instruction-list">
+          <li>Open a page in the preview.</li>
+          <li>Click on any image.</li>
+          <li>Choose a replacement image.</li>
+          <li>Preview your updated website.</li>
+        </ol>
+
+      </div>
+
+
+      <div class="sidebar-card">
+
+        <h3>Storage</h3>
+
+        <p class="small-text">
+          Image replacements are stored locally
+          in this browser.
+        </p>
+
+        <p class="small-text warning-text">
+          Clear browser data may remove saved changes.
+        </p>
+
+      </div>
+
+
+      <div id="selectedImageInfo"
+           class="selected-image-info">
+
+        <h3>Selected Image</h3>
+
+        <p id="selectedImageName">
+          No image selected
+        </p>
+
+      </div>
+
+    </aside>
+
+
+    <section class="preview-area">
+
+      <div class="preview-toolbar">
+
+        <div class="preview-title">
+          <span class="live-dot"></span>
+          Website Preview
+        </div>
+
+        <div class="preview-hint">
+          Click an image to edit
+        </div>
+
+      </div>
+
+
+      <div class="website-frame">
+
+        <iframe
+          id="websiteFrame"
+          src="index.html?editorMode=true"
+          title="Website preview">
+        </iframe>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <div id="imageEditorModal"
+       class="modal hidden"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="modalTitle">
+
+    <div class="modal-overlay"
+         id="modalOverlay">
+    </div>
+
+    <div class="modal-content">
+
+      <button id="closeModalButton"
+              class="modal-close"
+              aria-label="Close">
+        &times;
+      </button>
+
+      <span class="modal-eyebrow">
+        CUSTOMIZE IMAGE
+      </span>
+
+      <h2 id="modalTitle">
+        Replace Image
+      </h2>
+
+      <p class="modal-description">
+        Select an image from your device.
+        Your website layout will remain unchanged.
+      </p>
+
+
+      <div class="image-preview-box">
+
+        <img id="currentImagePreview"
+             src=""
+             alt="Current image preview">
+
+      </div>
+
+
+      <label for="imageFileInput"
+             class="file-upload-label">
+
+        <span class="upload-icon">+</span>
+
+        <span>
+          Choose New Image
+        </span>
+
+      </label>
+
+      <input
+        type="file"
+        id="imageFileInput"
+        accept="image/*"
+        hidden>
+
+
+      <p id="selectedFileName"
+         class="selected-file-name">
+        No file selected
+      </p>
+
+
+      <div class="modal-actions">
+
+        <button id="cancelImageButton"
+                class="editor-button secondary">
+          Cancel
+        </button>
+
+        <button id="saveImageButton"
+                class="editor-button primary"
+                disabled>
+          Apply Image
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div id="notification"
+       class="notification">
+    <span id="notificationMessage"></span>
+  </div>
+
+
+  <script src="editor.js"></script>
+
+</body>
+</html>
