@@ -1,0 +1,268 @@
+
+{
+  "name": "Ciao Bella",
+
+  "tagline": "Luxury beauty, crafted around you.",
+
+  "description": "A sophisticated beauty and grooming destination in Sector 35C, Chandigarh, offering hair, beauty, skincare, nails and grooming services.",
+
+  "metadata": {
+    "title": "Ciao Bella | Luxury Salon Chandigarh",
+    "description": "Ciao Bella is a luxury salon in Sector 35C, Chandigarh offering hair, beauty, skincare, nails, grooming and special occasion styling."
+  },
+
+  "hero": {
+    "eyebrow": "LUXURY BEAUTY · CHANDIGARH",
+
+    "title": "Beauty,<br>beautifully<br>done.",
+
+    "description": "Hair, beauty, nails and grooming experiences crafted with care, precision and a personal touch.",
+
+    "cta": "Book Appointment",
+
+    "image": "images/hero.jpg"
+  },
+
+  "about": {
+    "enabled": true,
+
+    "title": "Your beauty,<br>our craft.",
+
+    "text": "Located in Sector 35C, Chandigarh, Ciao Bella brings together professional hair, beauty, skincare, nail and grooming services under one roof.",
+
+    "image": "images/about.jpg"
+  },
+
+  "contact": {
+    "phone": "+91 98889 55800",
+
+    "whatsapp": "919888955800",
+
+    "email": "",
+
+    "address": "SCO 496, 35C,\nSector 35, Chandigarh,\n160022",
+
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=SCO+496%2C+35C%2C+Sector+35%2C+Chandigarh+160022",
+
+    "mapsEmbedUrl": "https://www.google.com/maps?q=SCO%20496%2C%2035C%2C%20Sector%2035%2C%20Chandigarh%20160022&output=embed",
+
+    "instagram": "https://instagram.com/ciaobellachd",
+
+    "instagramHandle": "@ciaobellachd",
+
+    "googleRating": "4.5"
+  },
+
+  "hours": {
+    "monday": "10:00 AM - 8:00 PM",
+    "tuesday": "10:00 AM - 8:00 PM",
+    "wednesday": "10:00 AM - 8:00 PM",
+    "thursday": "10:00 AM - 8:00 PM",
+    "friday": "10:00 AM - 8:00 PM",
+    "saturday": "10:00 AM - 8:00 PM",
+    "sunday": "10:00 AM - 8:00 PM"
+  },
+
+  "images": {
+    "logo": "",
+
+    "gallery": [
+      {
+        "src": "images/lips.jpg",
+        "alt": "Beauty lips transformation at Ciao Bella"
+      },
+      {
+        "src": "images/pedicure.jpg",
+        "alt": "Professional pedicure service at Ciao Bella"
+      },
+      {
+        "src": "images/facial.jpg",
+        "alt": "Facial and skincare treatment at Ciao Bella"
+      },
+      {
+        "src": "images/nails.jpg",
+        "alt": "Professional nail service at Ciao Bella"
+      },
+      {
+        "src": "images/hero.jpg",
+        "alt": "Ciao Bella luxury salon"
+      },
+      {
+        "src": "images/about.jpg",
+        "alt": "Ciao Bella salon beauty experience"
+      }
+    ]
+  },
+
+  "services": [
+    {
+      "category": "Hair",
+      "items": [
+        {
+          "name": "Haircuts & Styling",
+          "description": "Professional cuts and styling tailored to your look.",
+          "price": ""
+        },
+        {
+          "name": "Hair Color & Highlights",
+          "description": "Colour services designed around your style and complexion.",
+          "price": ""
+        },
+        {
+          "name": "Balayage",
+          "description": "Dimensional colour with a soft, natural finish.",
+          "price": ""
+        }
+      ]
+    },
+
+    {
+      "category": "Beauty & Skin",
+      "items": [
+        {
+          "name": "Brazilian Waxing",
+          "description": "Professional waxing in a comfortable salon environment.",
+          "price": ""
+        },
+        {
+          "name": "Waxing",
+          "description": "Body waxing services for smooth, cared-for skin.",
+          "price": ""
+        },
+        {
+          "name": "Eyebrow Shaping & Tinting",
+          "description": "Defined brows shaped and tinted to complement your features.",
+          "price": ""
+        },
+        {
+          "name": "Facials & Skin Care",
+          "description": "Relaxing facial and skincare treatments.",
+          "price": ""
+        },
+        {
+          "name": "Makeup Services",
+          "description": "Makeup for events, celebrations and special occasions.",
+          "price": ""
+        },
+        {
+          "name": "Leg Spa",
+          "description": "A relaxing treatment designed to refresh and rejuvenate.",
+          "price": ""
+        }
+      ]
+    },
+
+    {
+      "category": "Nails",
+      "items": [
+        {
+          "name": "Manicure",
+          "description": "Detailed nail care and professional finishing.",
+          "price": ""
+        },
+        {
+          "name": "Pedicure",
+          "description": "Relaxing foot care and professional finishing.",
+          "price": ""
+        },
+        {
+          "name": "Acrylic Nails",
+          "description": "Stylish and durable acrylic nail services.",
+          "price": ""
+        }
+      ]
+    },
+
+    {
+      "category": "Grooming",
+      "items": [
+        {
+          "name": "Beard & Grooming Services",
+          "description": "Professional beard and men's grooming services.",
+          "price": ""
+        }
+      ]
+    },
+
+    {
+      "category": "Bridal & Special Occasions",
+      "items": [
+        {
+          "name": "Bridal & Special Occasion Styling",
+          "description": "Complete beauty and styling for important occasions.",
+          "price": ""
+        }
+      ]
+    }
+  ],
+
+  "team": [
+    {
+      "name": "Atif / Mohd Altaf",
+      "role": "Hair · Colour · Styling",
+      "description": "Mentioned by clients for hair colour, transformations and styling expertise.",
+      "image": ""
+    },
+    {
+      "name": "Ruth",
+      "role": "Nail Services",
+      "description": "Mentioned by clients for detailed nail services, patience and attention to detail.",
+      "image": ""
+    }
+  ],
+
+  "reviews": [
+    {
+      "name": "Poonam Jai",
+      "rating": 5,
+      "text": "A huge thank you to Atif for the amazing hair transformation! I absolutely love my new hair color. The shade turned out even better than I imagined, and the entire process was done with so much care and professionalism. Atif really understands what suits you and pays attention to every little detail. Highly recommend him if you’re looking for someone who can give you beautiful, flawless results. Thank you for making me feel so confident!"
+    },
+
+    {
+      "name": "Kajal Garg",
+      "rating": 5,
+      "text": "Got my nails done by Ruth and I’m honestly so happy with the results! She was very polite, extremely patient, and such a perfectionist. She made sure I was comfortable throughout. Highly recommend her"
+    },
+
+    {
+      "name": "Kushra Sharma",
+      "rating": 5,
+      "text": "I had a great experience at this salon! I got my hair colored and the service was amazing. After the treatment, my hair felt incredibly smooth and soft. The staff was very professional, and I would definitely recommend everyone to visit this salon once in a while if you want to take good care of your hair. A special mention to mohd altaf he truly has magic hands! He understood exactly the style I wanted and did an incredible job. If you visit, I highly recommend getting your service done by him."
+    }
+  ],
+
+  "booking": {
+    "defaultMessage": "Hello Ciao Bella! I would like to enquire about booking an appointment."
+  },
+
+  "enquiry": {
+    "description": "Fill in your details and send your appointment enquiry directly to Ciao Bella on WhatsApp."
+  },
+
+  "gallery": {
+    "description": "A glimpse into the Ciao Bella experience."
+  },
+
+  "home": {
+    "featuredServicesLimit": 6
+  },
+
+  "sections": {
+    "about": true,
+    "highlights": true,
+    "services": true,
+    "reviews": true,
+    "team": true,
+    "instagram": true,
+    "pricing": true
+  },
+
+  "theme": {
+    "primary": "#D8BFA3",
+    "secondary": "#F5E9D8",
+    "dark": "#5A3929",
+    "text": "#35241C",
+    "accent": "#B58A3A",
+    "rose": "#A97870"
+  }
+}
